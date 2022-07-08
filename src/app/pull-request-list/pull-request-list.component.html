@@ -1,0 +1,34 @@
+
+<header>
+  <h1>{{fullName | uppercase}}</h1>
+  <p>{{description}}</p>
+</header>
+
+<!-- <mat-form-field appearance="standard">
+  <mat-label>Filter</mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="" #input>
+</mat-form-field> -->
+
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="pullRequests" class="mat-elevation-z8">
+
+    <!-- Title Column -->
+    <ng-container matColumnDef="title">
+      <th mat-header-cell *matHeaderCellDef> Title </th>
+      <td mat-cell *matCellDef="let element"> {{element?.title}} </td>
+    </ng-container>
+
+    <!-- State Column -->
+    <ng-container matColumnDef="state">
+      <th mat-header-cell *matHeaderCellDef> State </th>
+      <td mat-cell *matCellDef="let element"> {{element?.state}} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns ? displayedColumns : []"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns ? displayedColumns : [];"
+      [routerLink]="['/pullrequest/', row.number]"></tr>
+
+  </table>
+
+  <mat-paginator [length]="prLength" [pageSize]="20" (page)="onPaginate($event)"></mat-paginator>
+</div>

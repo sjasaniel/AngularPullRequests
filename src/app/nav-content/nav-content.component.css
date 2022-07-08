@@ -1,0 +1,7 @@
+button#toggleMenu {
+  margin: 5px
+}
+
+mat-sidenav-content {
+  margin: 0 5%;
+}

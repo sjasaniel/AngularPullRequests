@@ -1,0 +1,39 @@
+<header>
+  <h1>Pull Request Details</h1>
+</header>
+<form [formGroup]="form">
+  <p>
+    <mat-form-field  appearance="outline">
+      <mat-label>Number</mat-label>
+      <input matInput placeholder="Number" formControlName="numberFormControl">
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field  appearance="outline">
+      <mat-label>Title</mat-label>
+      <input matInput placeholder="Title" formControlName="titleFormControl">
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field  appearance="outline">
+      <mat-label>State</mat-label>
+      <input matInput placeholder="State" formControlName="stateFormControl">
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Created At</mat-label>
+      <input matInput placeholder="Created At" formControlName="createdAtFormControl">
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Requested Reviewer</mat-label>
+      <input matInput placeholder="Requested Reviewers" formControlName="reviewerFormControl">
+    </mat-form-field>
+  </p>
+</form>
